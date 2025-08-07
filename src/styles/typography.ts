@@ -14,7 +14,7 @@ type Props = {
 };
 
 export const H1 = styled.h1<Props>`
-  font-family: "Erik Text";
+  font-family: "proxyneo";
   font-weight: 400;
   line-height: 115%;
   color: ${({ theme, color }) => theme.colors[color || "black"]};
@@ -27,7 +27,7 @@ export const H1 = styled.h1<Props>`
 `;
 
 export const H2 = styled.h2<Props>`
-  font-family: "Erik Text";
+  font-family: "proxyneo";
   font-weight: 400;
   line-height: 115%;
   color: ${({ theme, color }) => theme.colors[color || "black"]};
@@ -40,7 +40,7 @@ export const H2 = styled.h2<Props>`
 `;
 
 export const H3 = styled.h3<Props>`
-  font-family: "Erik Text";
+  font-family: "proxyneo";
   font-weight: 400;
   line-height: 115%;
   color: ${({ theme, color }) => theme.colors[color || "black"]};
@@ -54,7 +54,7 @@ export const H3 = styled.h3<Props>`
 `;
 
 export const Paragraph = styled.p<Props>`
-  font-family: "Erik Text";
+  font-family: "proxyneo";
   font-weight: 400;
   line-height: 115%;
   font-size: ${({ $fontSize }) => $fontSize || "18px"};
@@ -68,7 +68,7 @@ export const Paragraph = styled.p<Props>`
 
 export const WysiwygCss = css`
   p {
-    font-family: "Erik Text";
+    font-family: "proxyneo";
     font-weight: 400;
     line-height: 115%;
     font-size: 18px;
@@ -113,11 +113,11 @@ export const WysiwygCss = css`
   }
 
   strong {
-    font-family: "Erik Text";
+    font-family: "proxyneo";
   }
 
   em {
-    font: "Erik Text" italic;
+    font: "proxyneo" italic;
   }
 `;
 

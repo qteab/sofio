@@ -79,7 +79,7 @@ const ArticleList: React.FC<IArticleListProps> = ({ articles }) => {
               </S.ImageContainer>
 
               <S.TextContainer>
-                {date && <Paragraph>{date}</Paragraph>}
+                {date && <S.DateText>{date}</S.DateText>}
                 <Paragraph>{text}</Paragraph>
               </S.TextContainer>
 

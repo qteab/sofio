@@ -1,18 +1,43 @@
-"use client";
+'use client';
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "styled-components";
 import defaultTheme from "@/styles/themes/default.theme";
 import "./globals.css";
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+
+const proxyMono = localFont({
+
+  src: [{
+    path: '../fonts/ProxyMono-Regular.otf',
+    weight: '400',
+    style: 'normal',
+  },
+  {
+    path: '../fonts/ProxyMono-Light.otf',
+    weight: '300',
+    style: 'normal',
+  },
+],
+  display: 'swap',
+  variable: '--font-proxymono',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+
+const proxyNeo = localFont({
+  src: [{
+    path: '../fonts/ProxyNeo-Regular.otf',
+    weight: '400',
+    style: 'normal',
+  },
+  {
+    path: '../fonts/ProxyNeo-Bold.otf',
+    weight: '700',
+    style: 'normal',
+  },
+],
+  display: 'swap',
+  variable: '--font-proxyneo',
 });
 
 // export const metadata: Metadata = {
@@ -26,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={proxyMono.className + ' ' + proxyNeo.className}>
+      <body>
         <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>
       </body>
     </html>

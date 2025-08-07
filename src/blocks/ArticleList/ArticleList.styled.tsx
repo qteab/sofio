@@ -1,4 +1,5 @@
 "use client";
+import { Paragraph } from "@/styles/typography";
 import styled from "styled-components";
 
 const Cards = styled.div`
@@ -58,6 +59,10 @@ const TextContainer = styled.div`
   }
 `;
 
+const DateText = styled(Paragraph)`
+  font-family: "proxymono";
+`
+
 const ScrollButtons = styled.div`
   display: flex;
   justify-content: center;
@@ -101,4 +106,4 @@ const Button = styled.button<{ $clickable: boolean }>`
   }
 `;
 
-export { Cards, Card, ImageContainer, TextContainer, ScrollButtons, Button };
+export { Cards, Card, ImageContainer, TextContainer, ScrollButtons, Button, DateText };
