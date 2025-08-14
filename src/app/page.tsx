@@ -18,7 +18,9 @@ import ArticleList from "@/blocks/ArticleList/ArticleList";
 import ContactForm from "@/blocks/ContactForm/ContactForm";
 import Statistics from "@/blocks/Statistics/Statistics";
 import ScrollBlock from "@/blocks/ScrollBlock/ScrollBlock";
-import { title } from "process";
+import image1 from "./assets/get_rapid_results.png";
+import image2 from "./assets/impact_of_meals.png";
+import image3 from "./assets/progress_over_time.png";
 
 export default function Home() {
   return (
@@ -68,20 +70,17 @@ export default function Home() {
           {
             title: "Get rapid results.",
             text: "Sofio makes it easy to understand your glucose levels. Your measurements will be taken automatically, with clear results delivered via a user-friendly app. Input your target glucose levels and see at a glance whether you’re in range.",
-            image:
-              "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: image1,
           },
           {
             title: "Understand the impact of your meals and activity.",
             text: "Like a window in to your body, Sofio lets you see how different kinds of food and exercise affect your glucose levels. Log your meals and activity to understand their impact, helping you make healthy choices.",
-            image:
-              "https://static.vecteezy.com/system/resources/previews/042/538/623/non_2x/white-smartphone-mockup-blank-screen-isolated-on-transparent-background-smartphone-mockup-frame-free-png.png",
+            image: image2,
           },
           {
             title: "See your progress over time.",
             text: "Whether you’re looking to track daily, weekly or monthly, Sofio gives you a record of your glucose levels over time. See the bigger picture to understand how often your glucose levels have stayed within a range that’s right for you.",
-            image:
-              "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            image: image3,
           },
         ]}
       />

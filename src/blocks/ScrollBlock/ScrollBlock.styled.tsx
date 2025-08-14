@@ -1,4 +1,5 @@
 "use client";
+import { Image as ImageComponent } from "@/styles/components";
 import { motion } from "motion/react";
 import styled from "styled-components";
 
@@ -8,9 +9,6 @@ const Wrapper = styled.div<{ $isInView?: boolean }>`
   transition: all 1s ease-in-out;
   opacity: ${({ $isInView }) => ($isInView ? 1 : 0)};
   top: ${({ $isInView }) => ($isInView ? "0px" : "40px")};
-
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.l}) {
-  }
 `;
 
 const Background = styled(motion.div)`
@@ -19,6 +17,7 @@ const Background = styled(motion.div)`
   height: calc(100vh - 50px);
   width: 100%;
   background: linear-gradient(180deg, #d6e6ea 0%, #8da3a8 100%);
+  overflow: hidden;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.l}) {
     top: 0px;
@@ -47,6 +46,9 @@ const Item = styled.div<{ $middle: boolean }>`
 const ActiveContent = styled.div`
   position: absolute;
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.l}) {
     height: 550px;
@@ -65,20 +67,12 @@ const ActiveContent = styled.div`
   }
 `;
 
-const Image = styled.div`
-  max-height: 45vh;
-  aspect-ratio: 400 / 850;
-  background-size: cover;
-  background-position: center;
+const Image = styled.img`
+  max-height: 50vh;
   margin: auto;
-  margin-bottom: 0;
-  margin-top: 40px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.l}) {
-    width: 100%;
-    aspect-ratio: 400 / 850;
-    margin: unset;
-    max-height: unset;
+    max-height: 70vh;
   }
 `;
 

@@ -4,16 +4,14 @@ import * as S from "./ScrollBlock.styled";
 import { H3, Paragraph } from "@/styles/typography";
 import { Flex } from "@/styles/global";
 import { motion, useInView } from "motion/react";
-import image1 from "./images/1.png";
-import image2 from "./images/2.png";
-import image3 from "./images/3.png";
 import { Image } from "@/styles/components";
+import { StaticImageData } from "next/image";
 
 export interface IScrollBlockProps {
   items: {
     title: string;
     text: string;
-    image: string;
+    image: StaticImageData;
   }[];
 }
 
@@ -60,14 +58,13 @@ const ScrollBlock: React.FC<IScrollBlockProps> = ({ items }) => {
           initial={{ opacity: 0, filter: "blur(2px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           exit={{ opacity: 0, filter: "blur(2px)" }}
-          transition={{ duration: 1, ease: "easeInOut", stiffness: 300 }}
+          transition={{ duration: 0.5, ease: "easeInOut", stiffness: 300 }}
         >
           <Flex $flexDir="column" $justify="center" $gap={12}>
             <H3>{activeContent.title}</H3>
             <Paragraph>{activeContent.text}</Paragraph>
           </Flex>
-
-          <Image src={activeContent.image} />
+          <S.Image src={activeContent.image.src} />
         </S.ActiveContent>
         <Flex
           $flexDir="column"
@@ -82,7 +79,6 @@ const ScrollBlock: React.FC<IScrollBlockProps> = ({ items }) => {
           ))}
         </Flex>
       </S.Background>
-
       <S.Items>
         {items.map((_, index) => (
           <S.Item
